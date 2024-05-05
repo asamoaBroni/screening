@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DASS 21 and PGSI Calculator</title>
+<style>
+  .question {
+    margin-bottom: 10px;
+  }
+h1 {
+            color: purple; /* or #800080 or rgb(128, 0, 128) */
+        }
+</style>
+</head>
+<body>
+  <h1>MHA School Mental Health Screening (DASS-21 And PGSI)</h1>
+  <h2>DASS 21</h2>
+<p style="font-weight:bold">Please read each statement and choose a number 0, 1, 2 or 3 that indicates how much the statement applied to you over the past week.There are no right or wrong answers. Do not spend too much time on any statement.</p> 
+  <form id="dassForm" style="border: 1px solid black;">
+ <div class="question" style="border: 1px solid black;">
+      <label for="q15">1. I found it hard to wind down:</label><br>
+      <input type="radio" id="dassQ15_0" name="dassQ15" value="0">
+      <label for="dassQ15_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ15_1" name="dassQ15" value="1">
+      <label for="dassQ15_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ15_2" name="dassQ15" value="2">
+      <label for="dassQ15_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ15_3" name="dassQ15" value="3">
+      <label for="dassQ15_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q8">I was aware of dryness of my mouth:</label><br>
+      <input type="radio" id="dassQ8_0" name="dassQ8" value="0">
+      <label for="dassQ8_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ8_1" name="dassQ8" value="1">
+      <label for="dassQ8_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ8_2" name="dassQ8" value="2">
+      <label for="dassQ8_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ8_3" name="dassQ8" value="3">
+      <label for="dassQ8_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+    <div class="question" style="border: 1px solid black;">
+      <label for="q1">I couldn’t seem to experience any positive feeling at all:</label><br>
+      <input type="radio" id="dassQ1_0" name="dassQ1" value="0">
+      <label for="dassQ1_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ1_1" name="dassQ1" value="1">
+      <label for="dassQ1_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ1_2" name="dassQ1" value="2">
+      <label for="dassQ1_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ1_3" name="dassQ1" value="3">
+      <label for="dassQ1_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q9">I experienced breathing difficulty (eg, excessively rapid breathing, 
+breathlessness in the absence of physical exertion):</label><br>
+      <input type="radio" id="dassQ9_0" name="dassQ9" value="0">
+      <label for="dassQ9_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ9_1" name="dassQ9" value="1">
+      <label for="dassQ9_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ9_2" name="dassQ9" value="2">
+      <label for="dassQ9_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ9_3" name="dassQ9" value="3">
+      <label for="dassQ9_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q2">I found it difficult to work up the initiative to do things:</label><br>
+      <input type="radio" id="dassQ2_0" name="dassQ2" value="0">
+      <label for="dassQ2_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ2_1" name="dassQ2" value="1">
+      <label for="dassQ2_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ2_2" name="dassQ2" value="2">
+      <label for="dassQ2_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ2_3" name="dassQ2" value="3">
+      <label for="dassQ2_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q16">I tended to over-react to situations :</label><br>
+      <input type="radio" id="dassQ16_0" name="dassQ16" value="0">
+      <label for="dassQ16_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ16_1" name="dassQ16" value="1">
+      <label for="dassQ16_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ16_2" name="dassQ16" value="2">
+      <label for="dassQ16_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ16_3" name="dassQ16" value="3">
+      <label for="dassQ16_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q10">I experienced trembling (eg, in the hands):</label><br>
+      <input type="radio" id="dassQ10_0" name="dassQ10" value="0">
+      <label for="dassQ10_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ10_1" name="dassQ10" value="1">
+      <label for="dassQ10_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ10_2" name="dassQ10" value="2">
+      <label for="dassQ10_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ10_3" name="dassQ10" value="3">
+      <label for="dassQ10_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q17">I felt that I was using a lot of nervous energy :</label><br>
+      <input type="radio" id="dassQ17_0" name="dassQ17" value="0">
+      <label for="dassQ17_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ17_1" name="dassQ17" value="1">
+      <label for="dassQ17_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ17_2" name="dassQ17" value="2">
+      <label for="dassQ17_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ17_3" name="dassQ17" value="3">
+      <label for="dassQ17_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q11">I was worried about situations in which I might panic and make a fool of myself:</label><br>
+      <input type="radio" id="dassQ11_0" name="dassQ11" value="0">
+      <label for="dassQ11_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ11_1" name="dassQ11" value="1">
+      <label for="dassQ11_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ11_2" name="dassQ11" value="2">
+      <label for="dassQ11_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ11_3" name="dassQ11" value="3">
+      <label for="dassQ11_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q3">I felt that I had nothing to look forward to:</label><br>
+      <input type="radio" id="dassQ3_0" name="dassQ3" value="0">
+      <label for="dassQ3_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ3_1" name="dassQ3" value="1">
+      <label for="dassQ3_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ3_2" name="dassQ3" value="2">
+      <label for="dassQ3_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ3_3" name="dassQ3" value="3">
+      <label for="dassQ3_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q18">I found myself getting agitated :</label><br>
+      <input type="radio" id="dassQ18_0" name="dassQ18" value="0">
+      <label for="dassQ18_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ18_1" name="dassQ18" value="1">
+      <label for="dassQ18_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ18_2" name="dassQ18" value="2">
+      <label for="dassQ18_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ18_3" name="dassQ18" value="3">
+      <label for="dassQ18_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q19">I found it difficult to relax  :</label><br>
+      <input type="radio" id="dassQ19_0" name="dassQ19" value="0">
+      <label for="dassQ19_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ19_1" name="dassQ19" value="1">
+      <label for="dassQ19_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ19_2" name="dassQ19" value="2">
+      <label for="dassQ19_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ19_3" name="dassQ19" value="3">
+      <label for="dassQ19_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q4">I felt down-hearted and blue:</label><br>
+      <input type="radio" id="dassQ4_0" name="dassQ4" value="0">
+      <label for="dassQ4_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ4_1" name="dassQ4" value="1">
+      <label for="dassQ4_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ4_2" name="dassQ4" value="2">
+      <label for="dassQ4_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ4_3" name="dassQ4" value="3">
+      <label for="dassQ4_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q20">I was intolerant of anything that kept me from getting on with what I was doing :</label><br>
+      <input type="radio" id="dassQ20_0" name="dassQ20" value="0">
+      <label for="dassQ20_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ20_1" name="dassQ20" value="1">
+      <label for="dassQ20_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ20_2" name="dassQ20" value="2">
+      <label for="dassQ20_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ20_3" name="dassQ20" value="3">
+      <label for="dassQ20_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q12">I felt I was close to panic:</label><br>
+      <input type="radio" id="dassQ12_0" name="dassQ12" value="0">
+      <label for="dassQ12_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ12_1" name="dassQ12" value="1">
+      <label for="dassQ12_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ12_2" name="dassQ12" value="2">
+      <label for="dassQ12_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ12_3" name="dassQ12" value="3">
+      <label for="dassQ12_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q5">I was unable to become enthusiastic about anything:</label><br>
+      <input type="radio" id="dassQ5_0" name="dassQ5" value="0">
+      <label for="dassQ5_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ5_1" name="dassQ5" value="1">
+      <label for="dassQ5_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ5_2" name="dassQ5" value="2">
+      <label for="dassQ5_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ5_3" name="dassQ5" value="3">
+      <label for="dassQ5_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q6">I felt I wasn’t worth much as a person :</label><br>
+      <input type="radio" id="dassQ6_0" name="dassQ6" value="0">
+      <label for="dassQ6_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ6_1" name="dassQ6" value="1">
+      <label for="dassQ6_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ6_2" name="dassQ6" value="2">
+      <label for="dassQ6_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ6_3" name="dassQ6" value="3">
+      <label for="dassQ6_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q21">I felt that I was rather touchy :</label><br>
+      <input type="radio" id="dassQ21_0" name="dassQ21" value="0">
+      <label for="dassQ21_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ21_1" name="dassQ21" value="1">
+      <label for="dassQ21_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ21_2" name="dassQ21" value="2">
+      <label for="dassQ21_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ21_3" name="dassQ21" value="3">
+      <label for="dassQ21_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q13">I was aware of the action of my heart in the absence of physicalexertion 
+(eg, sense of heart rate increase, heart missing a beat) :</label><br>
+      <input type="radio" id="dassQ13_0" name="dassQ13" value="0">
+      <label for="dassQ13_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ13_1" name="dassQ13" value="1">
+      <label for="dassQ13_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ13_2" name="dassQ13" value="2">
+      <label for="dassQ13_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ13_3" name="dassQ13" value="3">
+      <label for="dassQ13_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q14">I felt scared without any good reason:</label><br>
+      <input type="radio" id="dassQ14_0" name="dassQ14" value="0">
+      <label for="dassQ14_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ14_1" name="dassQ14" value="1">
+      <label for="dassQ14_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ14_2" name="dassQ14" value="2">
+      <label for="dassQ14_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ14_3" name="dassQ14" value="3">
+      <label for="dassQ14_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+ <div class="question" style="border: 1px solid black;">
+      <label for="q7">I felt that life was meaningless:</label><br>
+      <input type="radio" id="dassQ7_0" name="dassQ7" value="0">
+      <label for="dassQ7_0">Did not apply to me at all</label><br>
+      <input type="radio" id="dassQ7_1" name="dassQ7" value="1">
+      <label for="dassQ7_1">Applied to me to some degree, or some of the time</label><br>
+      <input type="radio" id="dassQ7_2" name="dassQ7" value="2">
+      <label for="dassQ7_2">Applied to me to a considerable degree, or a good part of time</label><br>
+      <input type="radio" id="dassQ7_3" name="dassQ7" value="3">
+      <label for="dassQ7_3">Applied to me very much, or most of the time</label><br>
+    </div>
+
+
+  </form>
+
+  <h2>PGSI</h2>
+<p style="font-weight:bold">Answer the following questions when thinking about your gambling behaviour over the past 12 months.</p> 
+  <form id="pgsiForm" style="border: 1px solid black;">
+    <div class="question" style="border: 1px solid black;">
+      <label for="pgsi1">Have you bet more than you could really afford to lose?</label><br>
+      <input type="radio" id="pgsi1_0" name="pgsi1" value="0">
+      <label for="pgsi1_0">Never</label><br>
+      <input type="radio" id="pgsi1_1" name="pgsi1" value="1">
+      <label for="pgsi1_1">Sometimes</label><br>
+      <input type="radio" id="pgsi1_2" name="pgsi1" value="2">
+      <label for="pgsi1_2">Most of the time</label><br>
+      <input type="radio" id="pgsi1_3" name="pgsi1" value="3">
+      <label for="pgsi1_3">always</label><br>
+    </div>
+<br>
+    <div class="question" style="border: 1px solid black;">
+      <label for="pgsi2">Have you needed to gamble with larger amounts of money to get the same feeling of excitement?</label><br>
+      <input type="radio" id="pgsi2_0" name="pgsi2" value="0">
+      <label for="pgsi2_0">Never</label><br>
+      <input type="radio" id="pgsi2_1" name="pgsi2" value="1">
+      <label for="pgsi2_1">Sometimes</label><br>
+      <input type="radio" id="pgsi2_2" name="pgsi2" value="2">
+      <label for="pgsi2_2">Most of the time</label><br>
+      <input type="radio" id="pgsi2_3" name="pgsi2" value="3">
+      <label for="pgsi2_3">always</label><br>
+    </div>
+    <div class="question" style="border: 1px solid black;">
+      <label for="pgsi3">Did you go back another day to try to win back the money you lost?</label><br>
+      <input type="radio" id="pgsi3_0" name="pgsi3" value="0">
+      <label for="pgsi3_0">Never</label><br>
+      <input type="radio" id="pgsi3_1" name="pgsi3" value="1">
+      <label for="pgsi3_1">Sometimes</label><br>
+      <input type="radio" id="pgsi3_2" name="pgsi3" value="2">
+      <label for="pgsi3_2">Most of the time</label><br>
+      <input type="radio" id="pgsi3_3" name="pgsi3" value="3">
+      <label for="pgsi3_3">always</label><br>
+    </div>
+    <div class="question" style="border: 1px solid black;">
+      <label for="pgsi4">Have you borrowed money or sold anything to get money to gamble?</label><br>
+      <input type="radio" id="pgsi4_0" name="pgsi4" value="0">
+      <label for="pgsi4_0">Never</label><br>
+      <input type="radio" id="pgsi4_1" name="pgsi4" value="1">
+      <label for="pgsi4_1">Sometimes</label><br>
+      <input type="radio" id="pgsi4_2" name="pgsi4" value="2">
+      <label for="pgsi4_2">Most of the time</label><br>
+      <input type="radio" id="pgsi4_3" name="pgsi4" value="3">
+      <label for="pgsi4_3">always</label><br>
+    </div>
+    <div class="question" style="border: 1px solid black;">
+      <label for="pgsi5">Have you felt that you might have a problem with gambling?</label><br>
+      <input type="radio" id="pgsi5_0" name="pgsi5" value="0">
+      <label for="pgsi5_0">Never</label><br>
+      <input type="radio" id="pgsi5_1" name="pgsi5" value="1">
+      <label for="pgsi5_1">Sometimes</label><br>
+      <input type="radio" id="pgsi5_2" name="pgsi5" value="2">
+      <label for="pgsi5_2">Most of the time</label><br>
+      <input type="radio" id="pgsi5_3" name="pgsi5" value="3">
+      <label for="pgsi5_3">always</label><br>
+    </div>
+    <div class="question" style="border: 1px solid black;">
+      <label for="pgsi6">Has gambling caused you any health problems, including stress or anxiety?</label><br>
+      <input type="radio" id="pgsi6_0" name="pgsi6" value="0">
+      <label for="pgsi6_0">Never</label><br>
+      <input type="radio" id="pgsi6_1" name="pgsi6" value="1">
+      <label for="pgsi6_1">Sometimes</label><br>
+      <input type="radio" id="pgsi6_2" name="pgsi6" value="2">
+      <label for="pgsi6_2">Most of the time</label><br>
+      <input type="radio" id="pgsi6_3" name="pgsi6" value="3">
+      <label for="pgsi6_3">always</label><br>
+    </div>
+    <div class="question" style="border: 1px solid black;">
+      <label for="pgsi7">Have people criticized your betting or told you that you had a gambling problem, 
+		regardless of whether or not you thought it was true?</label><br>
+      <input type="radio" id="pgsi7_0" name="pgsi7" value="0">
+      <label for="pgsi7_0">Never</label><br>
+      <input type="radio" id="pgsi7_1" name="pgsi7" value="1">
+      <label for="pgsi7_1">Sometimes</label><br>
+      <input type="radio" id="pgsi7_2" name="pgsi7" value="2">
+      <label for="pgsi7_2">Most of the time</label><br>
+      <input type="radio" id="pgsi7_3" name="pgsi7" value="3">
+      <label for="pgsi7_3">always</label><br>
+    </div>
+    <div class="question" style="border: 1px solid black;">
+      <label for="pgsi8">Has your gambling caused any financial problems for you or your household?</label><br>
+      <input type="radio" id="pgsi8_0" name="pgsi8" value="0">
+      <label for="pgsi8_0">Never</label><br>
+      <input type="radio" id="pgsi8_1" name="pgsi8" value="1">
+      <label for="pgsi8_1">Sometimes</label><br>
+      <input type="radio" id="pgsi8_2" name="pgsi8" value="2">
+      <label for="pgsi8_2">Most of the time</label><br>
+      <input type="radio" id="pgsi8_3" name="pgsi8" value="3">
+      <label for="pgsi8_3">always</label><br>
+    </div>
+    <div class="question" style="border: 1px solid black;">
+      <label for="pgsi9">Have you felt guilty about the way you gamble or what happens when you gamble?</label><br>
+      <input type="radio" id="pgsi9_0" name="pgsi9" value="0">
+      <label for="pgsi9_0">Never</label><br>
+      <input type="radio" id="pgsi9_1" name="pgsi9" value="1">
+      <label for="pgsi9_1">Sometimes</label><br>
+      <input type="radio" id="pgsi9_2" name="pgsi9" value="2">
+      <label for="pgsi9_2">Most of the time</label><br>
+      <input type="radio" id="pgsi9_3" name="pgsi9" value="3">
+      <label for="pgsi9_3">always</label><br>
+    </div>
+  </form>
+
+  <button id="calculateButton" onClick="addRadioResponses()">Calculate</button>
+ 
+ <div id="results"></div>
+
+<div>
+<h3>DASS-21 Scoring</h3>
+<p>Depression: 0-4 (normal), 5-6 (mild), 7-10 (moderate), 11-13 (severe), 14+ (extremely severe)</p>
+<p>Anxiety: 0-3 (normal), 4-5 (mild), 6-7 (moderate), 8-9 (severe), 10+ (extremely severe)
+</p>
+<p>Stress: 0-7 (normal), 8-9 (mild), 10-12 (moderate), 13-16 (severe), 17+ (extremely severe)</p>
+</div>
+
+<div>
+<h3>PGSI Scoring</h3>
+<p>Non-problem gambler - Score: 0</p>
+<p>Low-risk gambler - Score: 1–2</p>
+<p>Moderate-risk gambler - Score: 3–7</p>
+<p>Problem gambler - Score: 8 or above</p>
+</div>
+
+<script>
+
+function addRadioResponses() {
+    // Get the radio groups for question 1 and 3
+    var question1 = document.getElementsByName('dassQ1');
+    var question2 = document.getElementsByName('dassQ2');
+    var question3 = document.getElementsByName('dassQ3');
+    var question4 = document.getElementsByName('dassQ4');
+    var question5 = document.getElementsByName('dassQ5');
+    var question6 = document.getElementsByName('dassQ6');
+    var question7 = document.getElementsByName('dassQ7');
+
+    var question8 = document.getElementsByName('dassQ8');
+    var question9 = document.getElementsByName('dassQ9');
+    var question10 = document.getElementsByName('dassQ10');
+    var question11 = document.getElementsByName('dassQ11');
+    var question12 = document.getElementsByName('dassQ12');
+    var question13 = document.getElementsByName('dassQ13');
+    var question14 = document.getElementsByName('dassQ14');
+
+    var question15 = document.getElementsByName('dassQ15');
+    var question16 = document.getElementsByName('dassQ16');
+    var question17 = document.getElementsByName('dassQ17');
+    var question18 = document.getElementsByName('dassQ18');
+    var question19 = document.getElementsByName('dassQ19');
+    var question20 = document.getElementsByName('dassQ20');
+    var question21 = document.getElementsByName('dassQ21');
+
+    var depressionScore = 0;
+    var AnxietyScore = 0;
+    var stressScore = 0;
+
+    // Add the value of the selected radio button for question 1
+    for (var i = 0; i < question1.length; i++) {
+        if (question1[i].checked) {
+            depressionScore += Number(question1[i].value);
+            break;
+        }
+    }
+
+    // Add the value of the selected radio button for question 2
+    for (var i = 0; i < question2.length; i++) {
+        if (question2[i].checked) {
+            depressionScore += Number(question2[i].value);
+            break;
+        }
+    }
+  // Add the value of the selected radio button for question 3
+    for (var i = 0; i < question3.length; i++) {
+        if (question3[i].checked) {
+            depressionScore += Number(question3[i].value);
+            break;
+        }
+    }
+  // Add the value of the selected radio button for question 4
+    for (var i = 0; i < question4.length; i++) {
+        if (question4[i].checked) {
+            depressionScore += Number(question4[i].value);
+            break;
+        }
+    }
+  // Add the value of the selected radio button for question 5
+    for (var i = 0; i < question5.length; i++) {
+        if (question5[i].checked) {
+            depressionScore += Number(question5[i].value);
+            break;
+        }
+    }
+  // Add the value of the selected radio button for question 6
+    for (var i = 0; i < question6.length; i++) {
+        if (question6[i].checked) {
+            depressionScore += Number(question6[i].value);
+            break;
+        }
+    }
+  // Add the value of the selected radio button for question 7
+    for (var i = 0; i < question7.length; i++) {
+        if (question7[i].checked) {
+            depressionScore += Number(question7[i].value);
+            break;
+        }
+    }
+
+
+// Add the value of the selected radio button for question 8
+    for (var i = 0; i < question8.length; i++) {
+        if (question8[i].checked) {
+            AnxietyScore += Number(question8[i].value);
+            break;
+        }
+    }
+
+    // Add the value of the selected radio button for question 9
+    for (var i = 0; i < question9.length; i++) {
+        if (question9[i].checked) {
+            AnxietyScore += Number(question9[i].value);
+            break;
+        }
+    }
+  // Add the value of the selected radio button for question 10
+    for (var i = 0; i < question10.length; i++) {
+        if (question10[i].checked) {
+            AnxietyScore += Number(question10[i].value);
+            break;
+        }
+    }
+  // Add the value of the selected radio button for question 11
+    for (var i = 0; i < question11.length; i++) {
+        if (question11[i].checked) {
+            AnxietyScore += Number(question11[i].value);
+            break;
+        }
+    }
+  // Add the value of the selected radio button for question 12
+    for (var i = 0; i < question12.length; i++) {
+        if (question12[i].checked) {
+            AnxietyScore += Number(question12[i].value);
+            break;
+        }
+    }
+  // Add the value of the selected radio button for question 13
+    for (var i = 0; i < question13.length; i++) {
+        if (question13[i].checked) {
+            AnxietyScore += Number(question13[i].value);
+            break;
+        }
+    }
+  // Add the value of the selected radio button for question 14
+    for (var i = 0; i < question14.length; i++) {
+        if (question14[i].checked) {
+            AnxietyScore += Number(question14[i].value);
+            break;
+        }
+    }
+
+  // Add the value of the selected radio button for question 15
+    for (var i = 0; i < question15.length; i++) {
+        if (question15[i].checked) {
+            stressScore += Number(question15[i].value);
+            break;
+        }
+    }
+  // Add the value of the selected radio button for question 16
+    for (var i = 0; i < question16.length; i++) {
+        if (question16[i].checked) {
+            stressScore += Number(question16[i].value);
+            break;
+        }
+    }
+  // Add the value of the selected radio button for question 17
+    for (var i = 0; i < question17.length; i++) {
+        if (question17[i].checked) {
+            stressScore += Number(question17[i].value);
+            break;
+        }
+    }
+  // Add the value of the selected radio button for question 18
+    for (var i = 0; i < question18.length; i++) {
+        if (question18[i].checked) {
+            stressScore += Number(question18[i].value);
+            break;
+        }
+    }
+  // Add the value of the selected radio button for question 19
+    for (var i = 0; i < question19.length; i++) {
+        if (question19[i].checked) {
+            stressScore += Number(question19[i].value);
+            break;
+        }
+    }
+  // Add the value of the selected radio button for question 20
+    for (var i = 0; i < question20.length; i++) {
+        if (question20[i].checked) {
+            stressScore += Number(question20[i].value);
+            break;
+        }
+    }
+  // Add the value of the selected radio button for question 21
+    for (var i = 0; i < question21.length; i++) {
+        if (question21[i].checked) {
+            stressScore += Number(question21[i].value);
+            break;
+        }
+    }
+
+    var pgsiForm = document.getElementById('pgsiForm');
+    var pgsiRadios = pgsiForm.querySelectorAll('input[type="radio"]:checked');
+    var pgsiTotal = 0;
+
+    pgsiRadios.forEach(function(radio) {
+      pgsiTotal += parseInt(radio.value);
+    });
+
+     var resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = '<h2>Results:</h2>' +
+                           '<p style="font-weight:bold; color:blue">Depression Score: ' + depressionScore + '</p>' +
+			   '<p style="font-weight:bold; color:green">Anxiety Score: ' + AnxietyScore + '</p>' +
+                           '<p style="font-weight:bold; color:red">Stress Score: ' + stressScore + '</p>' +
+                           '<p style="font-weight:bold; color:brown">PGSI Score: ' + pgsiTotal + '</p>';
+
+}
+
+</script>
+</body>
+</html>
+
